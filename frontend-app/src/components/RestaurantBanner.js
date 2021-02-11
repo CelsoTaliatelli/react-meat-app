@@ -42,10 +42,10 @@ export default function Banner() {
                         <div className={classes.bannerContent}>
                             <Typography component="h1" variant="h3" color="inherit" gutterBottom>
                                 Nome do Restaurante
-                        </Typography>
+                            </Typography>
                             <Typography variant="h5" color="inherit" paragraph>
                                 Descrição do Restaurante
-                        </Typography>
+                            </Typography>
                         </div>
                     </Grid>
                 </Grid>
