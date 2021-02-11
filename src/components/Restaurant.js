@@ -6,7 +6,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import StarRateIcon from '@material-ui/icons/StarRate';
+import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,8 +53,9 @@ export default function Restaurant() {
       />
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+          <StarRateIcon style={{color: '#e7a74e'}}/>
         </IconButton>
+        <Typography>4,7 | Lanches | 2,3 Km</Typography>
       </CardActions>
     </Card>
   );

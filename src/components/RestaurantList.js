@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) =>({
 
 export default function RestaurantList() {
     const classes = useStyles();
-    const restaurants = [1,2,3];
+    const restaurants = [1,2,3,4,5,6];
     return (
         <Container className={classes.cardGrid} maxWidth="md">
             <Grid container spacing={4}>
