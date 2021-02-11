@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
-import { Container, CssBaseline, Grid } from '@material-ui/core';
+import { Container, CssBaseline, Grid, makeStyles } from '@material-ui/core';
 import Brand from './components/Brand';
 import Search from './components/Search';
 import Restaurant from './components/Restaurant';
+import RestaurantList from './components/RestaurantList';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,15 +17,12 @@ ReactDOM.render(
     <main>
       <Container maxWidth="sm">
         <Brand />
-          <Grid container justify="center">
-            <Search />
-          </Grid>
-      </Container>
-      <Container maxWidth="md">
-        <Grid item xs={12} sm={6} md={4}>
-          <Restaurant />
+        <Grid container justify="center">
+          <Search />
         </Grid>
       </Container>
+      <RestaurantList />
+      
     </main>
   </React.StrictMode>,
   document.getElementById('root')

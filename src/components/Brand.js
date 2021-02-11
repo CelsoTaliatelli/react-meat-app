@@ -7,7 +7,7 @@ const useStyles = makeStyles({
         marginTop:'6rem'
     },
     sp:{
-        color:'#001',
+        color:'#3e3e3e',
         fontWeight:'lighter'
     }
 })
@@ -15,8 +15,13 @@ const useStyles = makeStyles({
 export default function Brand() {
     const classes = useStyles();
     return (
-        <Typography component="h1" variant="h2" className={classes.root}>
-            GOOD<span className={classes.sp}>FOOD</span>
-        </Typography>
+        <div>
+            <Typography component="h1" variant="h2" className={classes.root}>
+                GOOD<span className={classes.sp}>FOOD</span>
+            </Typography>
+            <Typography component="h2" variant="h6" className={classes.sp} style={{textAlign:'center'}}>
+                Encontre aqui restuarntes e mercados próximos de você
+            </Typography>
+        </div>
     );
 }
