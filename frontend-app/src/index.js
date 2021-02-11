@@ -8,6 +8,7 @@ import Brand from './components/Brand';
 import Search from './components/Search';
 import Restaurant from './components/Restaurant';
 import RestaurantList from './components/RestaurantList';
+import RestaurantMenu from './components/RestaurantMenu';
 
 
 ReactDOM.render(
@@ -21,8 +22,7 @@ ReactDOM.render(
           <Search />
         </Grid>
       </Container>
-      <RestaurantList />
-      
+      <RestaurantMenu />
     </main>
   </React.StrictMode>,
   document.getElementById('root')
