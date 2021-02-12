@@ -43,8 +43,7 @@ export default function Restaurant() {
             R
           </Avatar>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title="Nome do Restaurante"
       />
       <CardMedia
         className={classes.media}

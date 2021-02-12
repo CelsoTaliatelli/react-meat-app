@@ -3,27 +3,29 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
-import { Container, CssBaseline, Grid, makeStyles } from '@material-ui/core';
-import Brand from './components/Brand';
-import Search from './components/Search';
-import Restaurant from './components/Restaurant';
-import RestaurantList from './components/RestaurantList';
+import { CssBaseline } from '@material-ui/core';
+import Home from './components/Home';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  BrowserRouter
+} from "react-router-dom";
+import RestaurantPage from './components/RestaurantPage';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <CssBaseline />
     <Header />
-    <main>
-      <Container maxWidth="sm">
-        <Brand />
-        <Grid container justify="center">
-          <Search />
-        </Grid>
-      </Container>
-      <RestaurantList />
-      
-    </main>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact={true} component={Home} />
+        <Route path="/restaurant" component={RestaurantPage}/>
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

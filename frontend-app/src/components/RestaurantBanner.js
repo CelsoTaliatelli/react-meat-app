@@ -2,6 +2,9 @@ import { Container, Grid, Paper, Typography } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
+    top: {
+        marginTop: '4rem'
+    },
     bannerImg: {
         position: 'relative',
         backgroundColor: theme.palette.grey[800],
@@ -33,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Banner() {
     const classes = useStyles();
     return (
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" className={classes.top}>
             <Paper className={classes.bannerImg} style={{ backgroundImage: 'url(banner.jpg)' }}>
                 {<img style={{ display: 'none' }} src='banner.jpg' alt='banner' />}
                 <div className={classes.overlay} />
