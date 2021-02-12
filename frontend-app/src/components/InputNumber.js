@@ -6,7 +6,7 @@ import RemoveIcon from '@material-ui/icons/Remove';
 
 const useStyles = makeStyles((theme) => ({
     TextField: {
-        width: '15ch'
+        width: '18ch'
     },
     margin: {
         margin: theme.spacing(1),
