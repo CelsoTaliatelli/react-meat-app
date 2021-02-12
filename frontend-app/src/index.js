@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import { CssBaseline } from '@material-ui/core';
 import Home from './components/Home';
-
 import {
   BrowserRouter as Router,
   Switch,
