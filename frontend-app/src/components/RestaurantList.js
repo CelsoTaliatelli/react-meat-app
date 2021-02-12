@@ -18,7 +18,7 @@ export default function RestaurantList() {
     const classes = useStyles();
     const restaurants = [1,2,3,4,5,6];
     return (
-        <Link to="/restaurant">
+        <Link to="/restaurant" style={{textDecoration: 'none'}}>
         <Container className={classes.cardGrid} maxWidth="md">
             <Grid container spacing={4}>
                 {restaurants.map((r) => (

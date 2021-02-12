@@ -44,7 +44,7 @@ export default function Banner() {
                     <Grid item md={6}>
                         <div className={classes.bannerContent}>
                             <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                                Nome do Restaurante
+                                Paella
                             </Typography>
                             <Typography variant="h5" color="inherit" paragraph>
                                 Descrição do Restaurante
