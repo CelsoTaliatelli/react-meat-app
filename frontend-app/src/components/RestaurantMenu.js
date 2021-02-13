@@ -44,7 +44,7 @@ export default function RestaurantMenu() {
                                     </Typography>
                                     <Grid container>
                                         <Grid item>
-                                            <InputNumber value="25" />
+                                            <InputNumber value={25} />
                                         </Grid>
                                         <Grid item>
                                             <Button
