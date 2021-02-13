@@ -1,4 +1,4 @@
-import { Grid, makeStyles, Card, CardContent, TextField, CardMedia, Hidden, Typography, Container, Button } from '@material-ui/core';
+import { Grid, makeStyles, Card, CardContent, CardMedia, Hidden, Typography, Container, Button } from '@material-ui/core';
 import InputNumber from './InputNumber';
 
 
@@ -15,6 +15,10 @@ const useStyles = makeStyles((theme) => ({
     cardGrid: {
         paddingTop: theme.spacing(15),
         paddingBottom: theme.spacing(8)
+    },
+    button: {
+        MarginTop: '2rem',
+        backgroundColor: '#DF1A48',
     }
 }));
 
@@ -36,7 +40,10 @@ export default function RestaurantMenu() {
                                         Arroz, Feijão, salada e bife a cavalo
                                     </Typography>
                                     <InputNumber />
-                                    <Button size="large">R$ 25,00</Button>
+                                    <Button 
+                                    size="large"
+                                    className={classes.button}
+                                    >R$ 25,00</Button>
                                 </CardContent>
                             </div>
                             <Hidden xsDown>
