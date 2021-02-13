@@ -10,7 +10,8 @@ const useStyles = makeStyles((theme) => ({
         width: '20ch'
     },
     margin: {
-        margin: theme.spacing(1),
+        marginRight: theme.spacing(1),
+        marginTop: theme.spacing(0.2)
     },
     iconColor: {
         color: '#DF1A48'
@@ -18,12 +19,21 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function InputNumber() {
+export default function InputNumber(props) {
     const [count, setCount] = useState(1);
     const classes = useStyles();
+    var valor = `R$ ${count * props.value}`;
     return (
+        <div>
         <TextField
             className={clsx(classes.TextField, classes.margin)}
+            InputLabelProps={{
+                style:{
+                    fontSize:'18px',
+                    fontWeight:'bold',
+                    color: 'green'
+                }
+            }}
             InputProps={{
                 startAdornment: (
                     <InputAdornment position="start">
@@ -42,7 +52,10 @@ export default function InputNumber() {
             }}
             type="number"
             variant="outlined"
+            size="small"
+            label={valor}
             value={count}
         />
+        </div>
     );
 }

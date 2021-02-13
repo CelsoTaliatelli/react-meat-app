@@ -1,4 +1,4 @@
-import { AppBar,Typography, Toolbar, makeStyles,Link, IconButton, Badge, MenuItem } from "@material-ui/core";
+import { AppBar,Typography, Toolbar, makeStyles,Link, IconButton, Badge } from "@material-ui/core";
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
 
 const useStyles = makeStyles({
