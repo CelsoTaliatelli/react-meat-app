@@ -1,4 +1,4 @@
-import { Grid, makeStyles, Card, CardContent, CardMedia, Hidden, Typography, Container, Button } from '@material-ui/core';
+import { Grid, makeStyles, Card, CardContent, CardMedia, Hidden, Typography, Container, Button, TextField, StepLabel } from '@material-ui/core';
 import InputNumber from './InputNumber';
 
 
@@ -17,10 +17,13 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: theme.spacing(8)
     },
     button: {
-        MarginTop: '2rem',
+        MarginTop: '25rem',
         backgroundColor: '#DF1A48',
+        color: '#FFF',
+        width: '15rem',
     }
 }));
+
 
 export default function RestaurantMenu() {
     const classes = useStyles();
@@ -39,11 +42,19 @@ export default function RestaurantMenu() {
                                     <Typography variant="subtitle1" paragraph>
                                         Arroz, Feijão, salada e bife a cavalo
                                     </Typography>
-                                    <InputNumber />
-                                    <Button 
-                                    size="large"
-                                    className={classes.button}
-                                    >R$ 25,00</Button>
+                                    <Grid container>
+                                        <Grid item>
+                                            <InputNumber value="25" />
+                                        </Grid>
+                                        <Grid item>
+                                            <Button
+                                                size="large"
+                                                className={classes.button}
+                                            >Adicionar ao Pedido
+                                    </Button>
+                                        </Grid>
+                                    </Grid>
+
                                 </CardContent>
                             </div>
                             <Hidden xsDown>
