@@ -48,7 +48,8 @@ export default function InputNumber(props) {
                             <AddIcon className={classes.iconColor} />
                         </IconButton>
                     </InputAdornment>
-                )
+                ),
+                max:5
             }}
             type="number"
             variant="outlined"

@@ -1,0 +1,25 @@
+{
+    "restaurants": [
+        {
+            "id": 1,
+            "name": "Italiano 10",
+            "description": "O melhor da comida italiana você encontra aqui",
+            "image": "paella.jpg",
+            "category": "comida italiana"
+        },
+        {
+            "id": 2,
+            "name": "Italiano 11",
+            "description": "O melhor da comida italiana você encontra aqui",
+            "image": "paella.jpg",
+            "category": "comida italiana"
+        },
+        {
+            "id": 3,
+            "name": "Italiano 12",
+            "description": "O melhor da comida italiana você encontra aqui",
+            "image": "paella.jpg",
+            "category": "comida italiana"
+        }
+    ]
+}
