@@ -1,5 +1,6 @@
 import { Grid, makeStyles, Card, CardContent, CardMedia, Hidden, Typography, Container, Button, TextField, StepLabel } from '@material-ui/core';
 import InputNumber from './InputNumber';
+import {addCart} from '../Services/Cart';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -17,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: theme.spacing(8)
     },
     button: {
+        "&:hover" :{
+            color:'#DF1A48'
+        },
         MarginTop: '25rem',
         backgroundColor: '#DF1A48',
         color: '#FFF',
@@ -47,7 +51,7 @@ export default function RestaurantMenu() {
                                             <InputNumber value={25} />
                                         </Grid>
                                         <Grid item>
-                                            <Button
+                                            <Button onClick={addCart}
                                                 size="large"
                                                 className={classes.button}
                                             >Adicionar ao Pedido
