@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 
-export function getAll() {
-    const host = fetch('http:://localhost:3000/restaurants')
+export async function getAll() {
+    return fetch('http://localhost:3004/restaurants')
         .then(response => response.json());
-    console.log(host);
+    
 }

@@ -1,9 +1,7 @@
 import { Container, Grid, makeStyles } from "@material-ui/core";
 import Restaurant from "./Restaurant";
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
+    
     Link
   } from "react-router-dom";
 
