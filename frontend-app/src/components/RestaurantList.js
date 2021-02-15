@@ -1,5 +1,6 @@
 import { Container, Grid, makeStyles } from "@material-ui/core";
 import Restaurant from "./Restaurant";
+import { getAll } from '../Services/restaurants';
 import {
     
     Link
@@ -11,9 +12,9 @@ const useStyles = makeStyles((theme) =>({
         paddingBottom: theme.spacing(8)
     }
 }));
-
 export default function RestaurantList() {
     const classes = useStyles();
+    const res = getAll();
     const restaurants = [1,2,3,4,5,6];
     return (
         <Link to="/restaurant" style={{textDecoration: 'none'}}>

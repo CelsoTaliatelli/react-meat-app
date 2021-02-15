@@ -1,0 +1,15 @@
+version: '3.0'
+
+services:
+
+  app:
+    build: .
+    command:
+      - npm start
+      - json-server --watch /src/Services/db.json --port 3004
+    entrypoint: .docker/entrypoint.sh
+    container_name: react-meat-app
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node/app
