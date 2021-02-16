@@ -32,7 +32,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Restaurant() {
+export default function Restaurant(props) {
+  const p = props.products;
   const classes = useStyles();
 
   return (
@@ -40,21 +41,21 @@ export default function Restaurant() {
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
-            R
+            {p.name.charAt(0)}
           </Avatar>
         }
-        title="Nome do Restaurante"
+        title={p.name}
       />
       <CardMedia
         className={classes.media}
-        image="paella.jpg"
+        image={p.image}
         title="Paella dish"
       />
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <StarRateIcon style={{color: '#e7a74e'}}/>
         </IconButton>
-        <Typography>4,7 | Lanches | 2,3 Km</Typography>
+        <Typography>{p.rate} | {p.category} | {p.area}</Typography>
       </CardActions>
     </Card>
   );

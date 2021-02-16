@@ -14,7 +14,6 @@ import {
 } from "react-router-dom";
 import RestaurantPage from './components/RestaurantPage';
 
-
 ReactDOM.render(
   <React.StrictMode>
     <CssBaseline />
