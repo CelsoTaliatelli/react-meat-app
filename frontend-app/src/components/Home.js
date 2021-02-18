@@ -11,7 +11,7 @@ const PRODUCTS = [
   ];
 
 export default function Home() {
-  const [state, setState] = useState(null);
+  const [state, setState] = useState(' ');
     return (
         <div>
         <Container maxWidth="sm">
