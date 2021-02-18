@@ -4,7 +4,6 @@ import RestaurantMenu from "./RestaurantMenu";
 
 export default function RestaurantPage() {
     let { id } = useParams();
-    console.log(id);
     return(
         <div>
             <Banner restaurantId={ id }/>
