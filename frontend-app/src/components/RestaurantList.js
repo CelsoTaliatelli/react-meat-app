@@ -1,7 +1,6 @@
 import { Container, Grid, makeStyles } from "@material-ui/core";
 import Restaurant from "./Restaurant";
-import React, { useState, useEffect } from 'react';
-import { axios } from 'axios';
+import React from 'react';
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -11,10 +10,9 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 export default function RestaurantList(props) {
-    const restaurants = props.products; 
-    console.log(props.products);
+    const restaurants = props.products;
+    console.log(props.filterText + 'ListRes'); 
     const classes = useStyles();
-    //const restaurants = [1, 2, 3];
     return (
         <Container className={classes.cardGrid} maxWidth="md">
             <Grid container spacing={4}>
