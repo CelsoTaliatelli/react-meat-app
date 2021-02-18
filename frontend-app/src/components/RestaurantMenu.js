@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function RestaurantMenu() {
+export default function RestaurantMenu(props) {
     const classes = useStyles();
     const menu = [1, 2, 3, 4];
     return (

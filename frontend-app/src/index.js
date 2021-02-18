@@ -21,7 +21,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route path="/" exact={true} component={Home} />
-        <Route path="/restaurant" component={RestaurantPage}/>
+        <Route path="/restaurants/:id" component={RestaurantPage}/>
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,

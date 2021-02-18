@@ -1,11 +1,14 @@
+import { useParams } from "react-router-dom";
 import Banner from "./RestaurantBanner";
 import RestaurantMenu from "./RestaurantMenu";
 
 export default function RestaurantPage() {
+    let { id } = useParams();
+    console.log(id);
     return(
         <div>
-            <Banner />
-            <RestaurantMenu />
+            <Banner restaurantId={ id }/>
+            <RestaurantMenu restaurantId={ id } />
         </div>
        
     );

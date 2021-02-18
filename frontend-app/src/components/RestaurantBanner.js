@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-export default function Banner() {
+export default function Banner(props) {
     const classes = useStyles();
     return (
         <Container maxWidth="lg" className={classes.top}>
