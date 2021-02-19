@@ -10,11 +10,11 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 export default function RestaurantList(props) {
-    const restaurants = props.products;
+    const restaurants = props.restaurants;
     const classes = useStyles();
     const filter = props.filterText;
     const gridItem = [];
-
+    console.log(restaurants);
     restaurants.forEach(r => {
         if(r.name.indexOf(filter) === -1){
             return;
