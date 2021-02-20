@@ -15,6 +15,14 @@
             "rate": 4.7,
             "area": "2,5 Km",
             "image": "italian.png"
+        },
+        {
+            "id": 3,
+            "name": "Yum Lee Food",
+            "category": "comida chinesa",
+            "rate": 4.7,
+            "area": "2,5 Km",
+            "image": "chinese.jpg"
         }
     ]
 }

@@ -2,6 +2,7 @@ import { Container, Grid, makeStyles } from "@material-ui/core";
 import Restaurant from "./Restaurant";
 import React from 'react';
 import { Link } from "react-router-dom";
+import { getAll } from "../Services/API";
 
 const useStyles = makeStyles((theme) => ({
     cardGrid: {
@@ -9,12 +10,13 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: theme.spacing(8)
     }
 }));
+
 export default function RestaurantList(props) {
+    console.log(props);
     const restaurants = props.restaurants;
     const classes = useStyles();
     const filter = props.filterText;
     const gridItem = [];
-    console.log(restaurants);
     restaurants.forEach(r => {
         if(r.name.indexOf(filter) === -1){
             return;

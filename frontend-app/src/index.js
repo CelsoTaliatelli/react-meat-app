@@ -20,7 +20,7 @@ ReactDOM.render(
     <Header />
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact={true} component={Home} />
+        <Route path="/" exact={true} component={ Home } />
         <Route path="/restaurants/:id" component={RestaurantPage}/>
       </Switch>
     </BrowserRouter>

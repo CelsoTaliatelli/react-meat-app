@@ -2,24 +2,15 @@ import { Container, Grid } from "@material-ui/core";
 import Brand from "./Brand";
 import RestaurantList from "./RestaurantList";
 import Search from "./Search";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react";
+import { getAll } from "../Services/API";
 
 
-export default function Home() {
-  const [state, setState] = useState({ restaurants : [] });
-
+ export default function Home() {
+  const [state, setState] = useState(' ');
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios(
-        'http://localhost:3004/restaurants',
-      );
-
-      setState(result.data);
-    };
-
-    fetchData();
-  }, []);
+    getAll().then(e => setState(e.data));
+  })
   return (
     <div>
       <Container maxWidth="sm">
@@ -31,7 +22,7 @@ export default function Home() {
           />
         </Grid>
       </Container>
-      <RestaurantList filterText={state} restaurants={state.restaurants.data} />
+      <RestaurantList filterText={state} restaurants={state} />
     </div>
   );
 }
