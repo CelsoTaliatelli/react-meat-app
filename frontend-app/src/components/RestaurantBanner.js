@@ -1,8 +1,10 @@
 import { Container, Grid, Paper, Typography } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles'
+import React,{ useEffect, useState } from "react";
 import { getById } from "../Services/API";
-
+let banner = "banner.jpg";
 const useStyles = makeStyles((theme) => ({
+
     top: {
         marginTop: '4rem'
     },
@@ -11,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.grey[800],
         color: '#FFF',
         marginBottom: theme.spacing(4),
-        backgroundImage: 'url(http://localhost:3000/banner.jpg)',
+        backgroundImage: `url(http://localhost:3000/${banner})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -35,26 +37,35 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function Banner(props) {
-    const r = props.restaurant;
+    const[banner,setState] = useState(' ');
+    const id = props.restaurantId;
     const classes = useStyles();
+    useEffect(() => {
+        getById(id).then(function (response) {
+            setState(response.data);
+        });
+    }, [])
+       
     return (
-        <Container maxWidth="lg" className={classes.top}>
-            <Paper className={classes.bannerImg} style={{ backgroundImage: 'url(banner.jpg)' }}>
-                {<img style={{ display: 'none' }} src='banner.jpg' alt='banner' />}
-                <div className={classes.overlay} />
-                <Grid container>
-                    <Grid item md={6}>
-                        <div className={classes.bannerContent}>
-                            <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                                Paella
-                            </Typography>
-                            <Typography variant="h5" color="inherit" paragraph>
-                                Descrição do Restaurante
-                            </Typography>
-                        </div>
+        <div>
+            <Container maxWidth="lg" className={classes.top}>
+                <Paper className={classes.bannerImg}>
+                    {<img style={{ display: 'none' }} src={banner[0].banner} alt='banner' />}
+                    <div className={classes.overlay} />
+                    <Grid container>
+                        <Grid item md={6}>
+                            <div className={classes.bannerContent}>
+                                <Typography component="h1" variant="h3" color="inherit" gutterBottom>
+                                    { banner[0].name }
+                                </Typography>
+                                <Typography variant="h5" color="inherit" paragraph>
+                                    { banner[0].description }
+                                </Typography>
+                            </div>
+                        </Grid>
                     </Grid>
-                </Grid>
-            </Paper>
-        </Container>
+                </Paper>
+            </Container>
+        </div>
     );
 }
