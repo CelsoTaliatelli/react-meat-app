@@ -1,5 +1,6 @@
 import { Container, Grid, Paper, Typography } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles'
+import { getById } from "../Services/API";
 
 const useStyles = makeStyles((theme) => ({
     top: {
@@ -34,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function Banner(props) {
+    const r = props.restaurant;
     const classes = useStyles();
     return (
         <Container maxWidth="lg" className={classes.top}>

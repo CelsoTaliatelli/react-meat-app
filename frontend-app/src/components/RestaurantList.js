@@ -2,7 +2,6 @@ import { Container, Grid, makeStyles } from "@material-ui/core";
 import Restaurant from "./Restaurant";
 import React from 'react';
 import { Link } from "react-router-dom";
-import { getAll } from "../Services/API";
 
 const useStyles = makeStyles((theme) => ({
     cardGrid: {
@@ -12,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function RestaurantList(props) {
-    console.log(props);
     const restaurants = props.restaurants;
     const classes = useStyles();
     const filter = props.filterText;

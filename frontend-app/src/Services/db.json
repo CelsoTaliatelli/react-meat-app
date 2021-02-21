@@ -3,10 +3,12 @@
         {
             "id": 1,
             "name": "Big Burger Food",
+            "description": "O melhor Burguer do mundo",
             "category": "lanches",
             "rate": 4.7,
             "area": "2,5 Km",
-            "image": "burger.jpeg"
+            "image": "burger.jpeg",
+            "banner":""
         },
         {
             "id": 2,
@@ -14,7 +16,8 @@
             "category": "comida italiana",
             "rate": 4.7,
             "area": "2,5 Km",
-            "image": "italian.png"
+            "image": "italian.png",
+            "banner":""
         },
         {
             "id": 3,
@@ -22,7 +25,8 @@
             "category": "comida chinesa",
             "rate": 4.7,
             "area": "2,5 Km",
-            "image": "chinese.jpg"
+            "image": "chinese.jpg",
+            "banner":""
         }
     ]
 }

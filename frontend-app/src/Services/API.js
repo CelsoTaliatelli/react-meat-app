@@ -8,3 +8,12 @@ export function getAll(/*result*/){
     
     return restaurants.get('/restaurants')
 }
+
+export function getById(id){
+    return restaurants.get('/restaurants',{ 
+        params:
+        {
+            id:id
+        } 
+    })
+}

@@ -2,15 +2,18 @@ import { Container, Grid } from "@material-ui/core";
 import Brand from "./Brand";
 import RestaurantList from "./RestaurantList";
 import Search from "./Search";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { getAll } from "../Services/API";
-
+  
+const RESTAURANTS = []
+getAll().then(function(response){
+    response.data.forEach(e => {
+      RESTAURANTS.push(e);
+    });
+});
 
  export default function Home() {
   const [state, setState] = useState(' ');
-  useEffect(() => {
-    getAll().then(e => setState(e.data));
-  })
   return (
     <div>
       <Container maxWidth="sm">
@@ -22,7 +25,7 @@ import { getAll } from "../Services/API";
           />
         </Grid>
       </Container>
-      <RestaurantList filterText={state} restaurants={state} />
+      <RestaurantList filterText={state} restaurants={RESTAURANTS} />
     </div>
   );
 }
