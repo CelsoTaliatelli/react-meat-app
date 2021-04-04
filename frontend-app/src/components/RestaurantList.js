@@ -15,6 +15,7 @@ export default function RestaurantList(props) {
     const classes = useStyles();
     const filter = props.filterText;
     const gridItem = [];
+    console.log(restaurants);
     restaurants.forEach(r => {
         if(r.name.indexOf(filter) === -1){
             return;
