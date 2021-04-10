@@ -5,19 +5,19 @@ import Search from "./Search";
 import { useState,useEffect } from "react";
 
  export default function Home() {
-  const [state, setState] = useState(0);
+  const [filter, setFilter] = useState(0);
   return (
     <div>
       <Container maxWidth="sm">
         <Brand />
         <Grid container justify="center">
           <Search
-            filterText={() => setState(state)}
-            onFilterTextChange={e => setState(e.target.value)}
+            filterText={() => setFilter(filter)}
+            onFilterTextChange={e => setFilter(e.target.value)}
           />
         </Grid>
       </Container>
-      <RestaurantList filterText={state} />
+      <RestaurantList filterText={filter} />
     </div>
   );
 }

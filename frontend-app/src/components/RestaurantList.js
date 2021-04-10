@@ -20,14 +20,15 @@ export default function RestaurantList(props) {
     const[data,setData] = useState(0);
     
     useEffect(async () => {
-        const result = await axios(
-           'http://localhost:8000/restaurants',
-        );
+        const result = 
+        await axios('http://localhost:8000/restaurants');
         setData(result.data);
     },[]);
 
     for(var i = 0;i < data.length;i++){
-        console.log(data[i].name);
+        if(filter !== ""){
+            console.log(filter);
+        }
         gridItem.push(
             <Grid item key={data[i].id} xs={12} sm={6} md={4}>
                 <Link to={`restaurants/${data[i].id}`} style={{ textDecoration: 'none' }}>
