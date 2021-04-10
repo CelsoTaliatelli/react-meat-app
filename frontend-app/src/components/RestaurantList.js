@@ -18,30 +18,29 @@ export default function RestaurantList(props) {
     const gridItem = [];
     
     const[data,setData] = useState(0);
-    
     useEffect(async () => {
-        const result = 
+        const restaurants = 
         await axios('http://localhost:8000/restaurants');
-        setData(result.data);
+        setData(restaurants.data);
     },[]);
 
-    for(var i = 0;i < data.length;i++){
-        if(filter !== ""){
-            console.log(filter);
-        }
-        gridItem.push(
-            <Grid item key={data[i].id} xs={12} sm={6} md={4}>
-                <Link to={`restaurants/${data[i].id}`} style={{ textDecoration: 'none' }}>
-                <Restaurant products={data[i]} />
-                </Link>
-            </Grid>
-        );
+    if(data){
+        data.forEach(r => {
+            gridItem.push(
+                <Grid item key={r.id} xs={12} sm={6} md={4}>
+                    <Link to={`restaurants/${r.id}`} style={{ textDecoration: 'none' }}>
+                    <Restaurant products={r} />
+                    </Link>
+                </Grid>
+            );
+        });
+    }
     }
 
     return (
         <Container className={classes.cardGrid} maxWidth="md">
             <Grid container spacing={4}>
-              {gridItem}
+                {gridItem}
             </Grid>
         </Container >
     );

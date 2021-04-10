@@ -5,7 +5,7 @@ import Search from "./Search";
 import { useState,useEffect } from "react";
 
  export default function Home() {
-  const [filter, setFilter] = useState(0);
+  const [filter, setFilter] = useState(' ');
   return (
     <div>
       <Container maxWidth="sm">
