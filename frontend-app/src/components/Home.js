@@ -3,25 +3,9 @@ import Brand from "./Brand";
 import RestaurantList from "./RestaurantList";
 import Search from "./Search";
 import { useState,useEffect } from "react";
-//import { getAll } from "../Services/API";
-import axios from "axios";
-  
-const RESTAURANTS = []
-/*getAll().then(function(response){
-    response.data.forEach(e => {
-      RESTAURANTS.push(e);
-    });
-});*/
 
  export default function Home() {
   const [state, setState] = useState(0);
-
-  useEffect(async () => {
-    const RESTAURANTS = await axios(
-      'http://localhost:3004/restaurants'
-    );
-    setState(RESTAURANTS.data);
-  },[]);
   return (
     <div>
       <Container maxWidth="sm">
@@ -33,7 +17,7 @@ const RESTAURANTS = []
           />
         </Grid>
       </Container>
-      <RestaurantList filterText={state} restaurants={state} />
+      <RestaurantList filterText={state} />
     </div>
   );
 }
