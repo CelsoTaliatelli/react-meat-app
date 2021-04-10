@@ -26,6 +26,9 @@ export default function RestaurantList(props) {
 
     if(data){
         data.forEach(r => {
+            if(r.name.indexOf(filter) === -1){
+                return;
+            }
             gridItem.push(
                 <Grid item key={r.id} xs={12} sm={6} md={4}>
                     <Link to={`restaurants/${r.id}`} style={{ textDecoration: 'none' }}>
@@ -35,7 +38,7 @@ export default function RestaurantList(props) {
             );
         });
     }
-    }
+    
 
     return (
         <Container className={classes.cardGrid} maxWidth="md">
