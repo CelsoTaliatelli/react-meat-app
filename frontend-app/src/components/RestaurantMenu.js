@@ -1,7 +1,8 @@
 import { Grid, makeStyles, Card, CardContent, CardMedia, Hidden, Typography, Container, Button, TextField, StepLabel } from '@material-ui/core';
 import InputNumber from './InputNumber';
 import {addCart} from '../Services/Cart';
-
+import {getById} from '../Services/API';
+import React,{useState,useEffect} from 'react';
 
 const useStyles = makeStyles((theme) => ({
     card: {
@@ -30,25 +31,35 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function RestaurantMenu(props) {
+
     const classes = useStyles();
-    const menu = [1, 2, 3, 4];
-    return (
-        <Container className={classes.cardGrid}>
+    const menu = [];
+    
+    const[products,setProducts] = useState(0);
+      useEffect(() => {
+        getById(props.restaurantMenu).then(function(response){
+            setProducts(response.data);
+        });
+      }, [])
+      if(products){
+          products.forEach(p => {
+              menu.push(
+            <Container className={classes.cardGrid}>
             <Grid container spacing={4}>
-                {menu.map((r) =>
-                    <Grid item key={r} xs={12} md={6}>
+                {p.menu.map((p) =>
+                    <Grid item key={p} xs={12} md={6}>
                         <Card className={classes.card}>
                             <div className={classes.cardDetails}>
                                 <CardContent>
                                     <Typography component="h2" variant="h5">
-                                        Nome do Prato
+                                        {p.name}
                                     </Typography>
                                     <Typography variant="subtitle1" paragraph>
-                                        Arroz, Feijão, salada e bife a cavalo
+                                        {p.description}
                                     </Typography>
                                     <Grid container>
                                         <Grid item>
-                                            <InputNumber value={25} />
+                                            <InputNumber value={p.price} />
                                         </Grid>
                                         <Grid item>
                                             <Button onClick={addCart}
@@ -68,6 +79,12 @@ export default function RestaurantMenu(props) {
                     </Grid>
                 )}
             </Grid>
-        </Container>
+        </Container>)
+          });
+      }
+    return (
+        < >
+            {menu}
+        </>
     );
 }

@@ -8,7 +8,12 @@
             "rate": 4.7,
             "area": "2,5 Km",
             "image": "burger.jpeg",
-            "banner": "banner.jpg"
+            "banner": "banner.jpg",
+            "menu": [
+                {"name":"X-Burguer","description":"Pão, bacon, alface","price":18.50},
+                {"name":"Burger Vegetariano","description":"Pão integral, burger de soja, alface","price":18.50},
+                {"name":"Cachorro Quente","description":"Pão, salsicha, molho","price":18.50}
+            ]
         },
         {
             "id": 2,
@@ -17,7 +22,12 @@
             "rate": 4.7,
             "area": "2,5 Km",
             "image": "italian.png",
-            "banner": "banner.jpg"
+            "banner": "banner.jpg",
+            "menu": [
+                {"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50},
+                {"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50},
+                {"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50}
+            ]
         },
         {
             "id": 3,
@@ -26,7 +36,12 @@
             "rate": 4.7,
             "area": "2,5 Km",
             "image": "chinese.jpg",
-            "banner": "banner.jpg"
+            "banner": "banner.jpg",
+            "menu": [
+                {"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50},
+                {"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50},
+                {"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50}
+            ]
         }
     ]
 }

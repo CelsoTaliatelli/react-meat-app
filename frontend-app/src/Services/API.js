@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const restaurants = axios.create({
-    baseURL: 'http://localhost:3004'
+    baseURL: 'http://localhost:8000'
 })
 
 export function getAll(/*result*/){
