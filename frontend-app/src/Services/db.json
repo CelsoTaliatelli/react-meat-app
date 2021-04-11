@@ -10,9 +10,9 @@
             "image": "burger.jpeg",
             "banner": "banner.jpg",
             "menu": [
-                {"name":"X-Burguer","description":"Pão, bacon, alface","price":18.50},
-                {"name":"Burger Vegetariano","description":"Pão integral, burger de soja, alface","price":18.50},
-                {"name":"Cachorro Quente","description":"Pão, salsicha, molho","price":18.50}
+                {"id":1,"name":"X-Burguer","description":"Pão, bacon, alface","price":18.50},
+                {"id":2,"name":"Burger Vegetariano","description":"Pão integral, burger de soja, alface","price":18.50},
+                {"id":3,"name":"Cachorro Quente","description":"Pão, salsicha, molho","price":18.50}
             ]
         },
         {
@@ -24,9 +24,9 @@
             "image": "italian.png",
             "banner": "banner.jpg",
             "menu": [
-                {"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50},
-                {"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50},
-                {"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50}
+                {"id":1,"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50},
+                {"id":2,"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50},
+                {"id":3,"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50}
             ]
         },
         {
@@ -38,9 +38,9 @@
             "image": "chinese.jpg",
             "banner": "banner.jpg",
             "menu": [
-                {"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50},
-                {"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50},
-                {"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50}
+                {"id":1,"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50},
+                {"id":2,"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50},
+                {"id":3,"name":"X-Burguer","description":"Pão,bacon,alface","price":18.50}
             ]
         }
     ]

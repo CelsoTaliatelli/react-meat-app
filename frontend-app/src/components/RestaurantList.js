@@ -23,7 +23,6 @@ export default function RestaurantList(props) {
         await axios('http://localhost:8000/restaurants');
         setData(restaurants.data);
     },[]);
-    console.log(data);
     if(data){
         data.forEach(r => {
             if(r.name.indexOf(filter) === -1){

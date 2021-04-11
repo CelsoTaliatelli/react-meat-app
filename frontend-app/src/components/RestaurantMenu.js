@@ -36,18 +36,18 @@ export default function RestaurantMenu(props) {
     const menu = [];
     
     const[products,setProducts] = useState(0);
-      useEffect(() => {
-        getById(props.restaurantMenu).then(function(response){
-            setProducts(response.data);
-        });
-      }, [])
+    useEffect(() => {
+    getById(props.restaurantMenu).then(function(response){
+        setProducts(response.data);
+    });
+    }, [])
+      
       if(products){
           products.forEach(p => {
               menu.push(
-            <Container className={classes.cardGrid}>
-            <Grid container spacing={4}>
+            <Grid key={p.id} container spacing={4}>
                 {p.menu.map((p) =>
-                    <Grid item key={p} xs={12} md={6}>
+                    <Grid item key={p.id} xs={12} md={6}>
                         <Card className={classes.card}>
                             <div className={classes.cardDetails}>
                                 <CardContent>
@@ -78,13 +78,12 @@ export default function RestaurantMenu(props) {
                         </Card>
                     </Grid>
                 )}
-            </Grid>
-        </Container>)
+            </Grid>)
           });
       }
     return (
-        < >
-            {menu}
-        </>
+        <Container className={classes.cardGrid}>
+            { menu }
+        </Container>
     );
 }
